@@ -35,7 +35,8 @@
     </div>
 </footer>
 
-<script>
+<script src="vendors/babel.min.js"></script>
+<script type="text/babel">
     function Header() {
         let [expanded, setExpanded] = React.useState(false);
         let [toggled, setToggled] = React.useState(false);
@@ -392,13 +393,15 @@
         </main>;
     }
 
-    const root = ReactDOM.createRoot(document.getElementById('app'));
-    root.render(
-        <>
-            <Header />
-            <Main />
-        </>
-    );
+    setTimeout(() => {
+        const root = ReactDOM.createRoot(document.getElementById('app'));
+        root.render(
+            <>
+                <Header />
+                <Main />
+            </>
+        );
+    }, 100);
 </script>
 
 </body>
