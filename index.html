@@ -23,11 +23,35 @@
 
     <link rel="stylesheet" type="text/css" href="index.css" />
     
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script defer src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script defer src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 
 </head>
 <body>
+    <header class="header">
+      <a href="/" class="header__logo" aria-label="Яндекс.Дом"></a>
+      <button class="header__menu">
+        <span class="header__menu-text a11y-hidden"> Открыть меню </span>
+      </button>
+      <ul class="header__links">
+        <li class="header__item">
+          <a
+            class="header__link header__link_current"
+            href="/"
+            aria-current="page"
+          >
+            Сводка
+          </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="/devices"> Устройства </a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="/scripts"> Сценарии </a>
+        </li>
+      </ul>
+    </header>
+
     <div id="app"></div>
     
     <footer class="footer">
@@ -50,6 +74,6 @@
           © 1997–2023 ООО «Яндекс»
       </div>
     </footer>
-    <script src="assets/main.js"></script>
+    <script defer src="assets/main.min.js"></script>
   </body>
 </html>
